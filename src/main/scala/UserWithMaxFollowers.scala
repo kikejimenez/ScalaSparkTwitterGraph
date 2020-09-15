@@ -5,22 +5,20 @@ import org.apache.spark.sql.functions.desc
 import org.apache.spark.storage.StorageLevel.MEMORY_AND_DISK
 
 
-/** Find the minimum temperature by weather station */
+/** Find the user with max followers */
 object UserWithMaxFollowers {
 
 
-  case class Match(user: Int, Follower: Int)
+  case class Match(user: Int, Follower :Int)
 
-  def mapper(line: String): Match = {
+  def mapper(line:String): Match = {
     val fields = line.split("\\s+")
     println(fields(0))
-    Match(fields(0).toInt, fields(1).toInt)
+     Match(fields(0).toInt, fields(1).toInt)
   }
 
   def main(args: Array[String]) {
 
-    //Set initial time
-    val t1 = System.nanoTime
 
     /** Our main function where the action happens */
 
@@ -54,6 +52,7 @@ object UserWithMaxFollowers {
     topMatchs.show(5)
 
     spark.stop()
+
 
 
   }

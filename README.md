@@ -16,6 +16,9 @@ The following table contains the top five users with greatest number of follower
 |19397785|1994926|
 +--------+-------+
 ```
-The code for the solution is in 'src/scala/UserWithMaxFollowers.scala'
-### Author
+
+The code for the solution is in 'src/main/scala/UserWithMaxFollowers.scala'
+
+## Author
+
  Enrique Jimenez
