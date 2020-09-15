@@ -25,9 +25,6 @@ object UserWithMaxFollowers {
     // Set the log level to only print errors
     Logger.getLogger("org").setLevel(Level.ERROR)
 
-    //Create Session
-    val logFile = "README.md" // Should be some file on your system
-
     val spark = SparkSession.builder
       .appName("UserWithMaxFollowers")
       .master("local[*]")
@@ -42,7 +39,7 @@ object UserWithMaxFollowers {
 
     val matchsDS = lines.toDS().persist(MEMORY_AND_DISK)
 
-    // Some SQL-style magic to sort
+    // SQL style count
     val topMatchs = matchsDS.groupBy("user").count().orderBy(desc("count")).persist(MEMORY_AND_DISK)
 
     println("Here is our inferred schema:")

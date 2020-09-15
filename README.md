@@ -1,10 +1,13 @@
 # Twitter Graph Dataset
+
 The dataset consists lines user-follower pairs (separated with the tab key).
 
 ## 1. Find the user with the Maximun number of followers
-### Solution 
+
+### Solution
 
 The following table contains the top five users with greatest number of followers
+
 ```SQL
 +--------+-------+
 |    user|  count|
