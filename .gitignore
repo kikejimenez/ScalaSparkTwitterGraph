@@ -1,0 +1,6 @@
+#gitignore
+data
+.idea
+project/project
+project/target
+target
