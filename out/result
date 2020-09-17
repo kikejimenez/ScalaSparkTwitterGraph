@@ -1,0 +1,17 @@
+Here is our inferred schema:
+root
+ |-- user: integer (nullable = false)
+ |-- count: long (nullable = false)
+
+Top five of influencers
++--------+-----+
+|    user|count|
++--------+-----+
+|61565604|   15|
+|61565219|   14|
+|61566071|   14|
+|61568523|   12|
+|61567021|   12|
++--------+-----+
+only showing top 5 rows
+
