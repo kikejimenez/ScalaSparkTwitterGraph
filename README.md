@@ -52,19 +52,9 @@ data/twitter_rv_sample.net \
 ```
 
 The job is run with the `spark-submit` command in the directory `spark-3.0.0-bin-hadoop2.7` of the spark application. This
-directory is not the repo and must be download from the Spark documentation.
+directory is not in the repo and must be downloaded from the Spark's site.
 The jar file expects the data file as an argument.
 
 ## Author
 
  Enrique Jimenez
-
-
-/usr/bin/time -o out/time -f '\t%E segs' \
-docker run -v $PWD:/wd -w /wd openjdk:8 \
-spark-3.0.0-bin-hadoop2.7/bin/spark-submit \
---class "UserWithMaxFollowers" \
---master "local[*]" \
-twittergraph_2.12-0.1.0-SNAPSHOT.jar \
-data/twitter_rv_sample.net \
-2> out/info 1> out/result &
