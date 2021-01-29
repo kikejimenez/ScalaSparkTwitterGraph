@@ -36,12 +36,12 @@ The code for the solution is in 'src/main/scala/UserWithMaxFollowers.scala'
 
 and run the `package` command in the sbt-shell.
 
-### *Run with spark-submit*
+### *Spark-submit*
 
 The following code calls `UserWithMaxFollowers` in the *.jar* file, stores the result in *out/result* and the log-info in *out/info*. Also, the time total execution time is stored in  *out/time*
 
 ```shell
-/usr/bin/time -o out/time -f '\t%E segs' \
+/usr/bin/time -o out/time -f '\t%E ' \
 docker run -v $PWD:/wd -w /wd openjdk:8 \
 spark-3.0.0-bin-hadoop2.7/bin/spark-submit \
 --class "UserWithMaxFollowers" \
